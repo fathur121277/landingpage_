@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Alumni - Universitas Malikussaleh</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <style>
+    nav {
+      background-color: white !important;
+      height: 80px;
+      line-height: 70px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav .nav-wrapper {
+      height: 70px;
+    }
+    nav ul li a {
+      color: #2e7d32 !important;
+      line-height: 70px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #1b5e20 !important;
+    }
+    nav .brand-logo img {
+      height: 60px;
+      vertical-align: middle;
+    }
+    nav .btn.green.lighten-1 {
+      background-color: #2e7d32 !important;
+      color: white !important;
+      line-height: 36px;
+      padding: 0 25px;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: none;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    nav .btn.green.lighten-1:hover {
+      background-color: #1b5e20 !important;
+    }
+    .sidenav-trigger i {
+      color: #2e7d32 !important;
+    }
+    body {
+      background-color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+    }
+    main {
+      flex: 1 0 auto;
+      padding: 40px 20px;
+    }
+    .container.login-container {
+      max-width: 960px;
+    }
+    h4 {
+      color: #2e7d32;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .info-section {
+      padding-right: 40px;
+      border-right: 1px solid #ccc;
+    }
+    .login-section {
+      padding-left: 40px;
+    }
+    .alert {
+      background-color: #e57373;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      display: none;
+    }
+    label {
+      color: rgba(0,0,0,0.6);
+    }
+    input[type="email"], input[type="password"] {
+      border-bottom: 1px solid #2e7d32;
+      box-shadow: none;
+    }
+    input[type="email"]:focus, input[type="password"]:focus {
+      border-bottom: 2px solid #1b5e20 !important;
+      box-shadow: 0 1px 0 0 #1b5e20 !important;
+    }
+    button.btn {
+      background-color: #2e7d32;
+      text-transform: uppercase;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(46, 125, 50, 0.6);
+      transition: background-color 0.3s ease;
+    }
+    button.btn:hover {
+      background-color: #1b5e20;
+    }
+    @media (max-width: 767px) {
+      .info-section {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+      .login-section {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="sidenav-trigger" data-target="mobile-nav" href="#"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html#hero">Beranda</a></li>
+            <li><a href="index.html#news">Berita</a></li>
+            <li><a href="index.html#report">Laporan</a></li>
+            <li><a href="index.html#statistic">Statistik</a></li>
+            <li><a href="index.html#partners">Kuesioner</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+            <li><a class="btn green lighten-1" href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Main content halaman login -->
+  <main>
+    <div class="container login-container">
+      <h4>Penelusuran Alumni Universitas Malikussaleh</h4>
+      <div class="row">
+        <div class="col s12 m6 info-section">
+          <h5>Informasi</h5>
+          <p>Penelusuran Alumni dilakukan untuk memperoleh informasi dan keberadaan alumni Universitas Malikussaleh baik dalam masa transisi maupun ketika sudah memasuki dunia kerja.</p>
+          <p>Hasil dari survey ini akan menjadi umpan balik yang sangat berguna bagi Universitas Malikussaleh untuk pengembangan kedepannya. Oleh karena itu, kami mohon kesediaan para alumni yang terhormat untuk dapat mengisi kuesioner ini.</p>
+        </div>
+        <div class="col s12 m6 login-section">
+          <h5>Login Alumni</h5>
+          <div class="alert" id="alertBox"> </div>
+          <form action="" method="POST">
+            <div class="input-field">
+              <input id="email" name="email" required type="email" />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+              <input id="password" name="password" required type="password" />
+              <label for="password">Password</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Masuk</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const alertBox = document.getElementById("alertBox");
+
+      if (urlParams.has("alert")) {
+        alertBox.style.display = "block";
+        alertBox.textContent = "Maaf, anda harus login terlebih dahulu";
+      } else {
+        alertBox.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
